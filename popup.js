@@ -12,6 +12,12 @@ document.getElementById('decodeButton').addEventListener('click', function() {
   document.getElementById('result').textContent = result;
 });
 
+document.getElementById('clearButton').addEventListener('click', function() {
+  document.getElementById('inputText').value = ''; // Clear the textarea
+  document.getElementById('shift').value = ''; // Clear the shift input
+  document.getElementById('result').textContent = ''; // Clear the result
+});
+
 function caesarCipher(str, shift) {
   return str.split('').map(char => {
     if (char.match(/[a-z]/i)) {
