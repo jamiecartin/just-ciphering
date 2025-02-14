@@ -18,6 +18,17 @@ document.getElementById('clearButton').addEventListener('click', function() {
   document.getElementById('result').textContent = ''; // Clear the result
 });
 
+document.getElementById('copyButton').addEventListener('click', function() {
+  const resultText = document.getElementById('result').textContent;
+  if (resultText) {
+    navigator.clipboard.writeText(resultText)
+      .then(() => alert('Copied to clipboard!'))
+      .catch(() => alert('Failed to copy.'));
+  } else {
+    alert('No result to copy!');
+  }
+});
+
 function caesarCipher(str, shift) {
   return str.split('').map(char => {
     if (char.match(/[a-z]/i)) {
