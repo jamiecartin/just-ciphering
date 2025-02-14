@@ -17,3 +17,15 @@ input {
 button {
   margin-right: 5px;
 }
+
+#clearButton {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#clearButton:hover {
+  background-color: #cc0000;
+}
